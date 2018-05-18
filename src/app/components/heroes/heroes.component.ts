@@ -8,11 +8,14 @@ import { HEROES } from '../../mockHeroes';
   styleUrls: ['./heroes.component.css']
 })
 export class HeroesComponent implements OnInit {
-
+  // Properties
   heroes = HEROES;
-
+  selectedHero: Hero;
+  // Life cycle hooks
   ngOnInit() {
-    console.log(HEROES);
   }
-
+  /// event Handlers
+  onSelect(hero: Hero): void {
+    this.selectedHero = hero;
+  }
 }
