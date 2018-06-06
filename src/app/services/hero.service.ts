@@ -53,7 +53,6 @@ export class HeroService {
         catchError(this.handleError<any>('updateHero'))
       );
   }
-  //comment;
 
   deleteHero(hero: Hero | number): Observable<Hero> {
     const id = typeof hero === 'number' ? hero : hero.id;
